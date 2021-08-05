@@ -1,11 +1,14 @@
-function user(nombre, edad, ciudad) {
-    this.nombre = prompt("ingrese su nombre");
-    this.edad   = prompt ("ingrese su edad");
-    this.ciudad  = prompt("ingrese ciudad de residencia");
+function User(dato1) {
+    this.nombre = dato1.nombre;
+    this.edad = dato1.edad;
+    this.ciudad = dato1.ciudad;
 }
-
-user()
-alert(`DATOS DE USUARIO:\nNOMBRE: ${nombre}\nEDAD: ${edad}\nRESIDENCIA: ${ciudad}`)
+const User0 = new User({
+    nombre: prompt("ingrese su nombre"),
+    edad: prompt("ingrese su edad"),
+    ciudad: prompt("ingrese ciudad de residencia")
+})
+alert(`DATOS DE USUARIO:\nNOMBRE: ${User0.nombre}\nEDAD: ${User0.edad}\nRESIDENCIA: ${User0.ciudad}`)
 
 let envio = 0
 let iva = 0
